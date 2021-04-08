@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/LLoadout/assets/blob/master/LLoadout_refactoring.png" width="500" title="LLoadout logo">
+    <img src="https://github.com/LLoadout/assets/blob/master/LLoadout_refactor.png" width="500" title="LLoadout logo">
 </p>
 
 # LLoadout
