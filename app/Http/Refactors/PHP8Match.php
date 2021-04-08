@@ -11,6 +11,8 @@ class PHP8Match extends Refactor implements RefactorInterface
 
     public function original($args): PHP8Match
     {
+        /** code to refactor **/
+
         $status = (int)$args['status'];
 
         switch ($status) {
@@ -27,13 +29,18 @@ class PHP8Match extends Refactor implements RefactorInterface
                 $notifier = $this->SendBlockedNotification();
                 break;
         }
-        echo "<h3>output from original method</h3>";
-        echo $notifier->notify->__invoke();
+
+        /** end code to refactor  */
+
+
+        $this->showOutput(__FUNCTION__, $notifier->notify->__invoke());
         return $this;
     }
 
     public function refactor($args): PHP8Match
     {
+        /** refactored code **/
+
         $status = (int)$args['status'];
 
         $notifier = match ($status) {
@@ -43,18 +50,18 @@ class PHP8Match extends Refactor implements RefactorInterface
             self::BLOCKED => $this->SendBlockedNotification(),
         };
 
-        echo "<h3>output from refactored method</h3>";
-        echo $notifier->notify->__invoke();
+        /** end refactored code  */
 
+
+        $this->showOutput(__FUNCTION__, $notifier->notify->__invoke());
         return $this;
     }
 
-    public function getExplanation(){
-
-        $explanation = '
+    public function getExplanation() : string
+    {
+        return '
             <h1>This shows blabla</h1>
         ';
-        return $explanation;
     }
 
 }

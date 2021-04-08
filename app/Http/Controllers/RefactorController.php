@@ -10,7 +10,7 @@ class RefactorController extends Controller
     {
         $args     = request()->all();
         $refactor = RefactorFactory::create($refactor);
-        echo $refactor->original($args)->refactor($args)->explain();
+        $refactor->explain()->original($args)->refactor($args);
 
     }
 }

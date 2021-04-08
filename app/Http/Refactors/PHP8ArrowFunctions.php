@@ -7,6 +7,8 @@ class PHP8ArrowFunctions extends Refactor implements RefactorInterface
 
     public function original($args): PHP8ArrowFunctions
     {
+        /** code */
+
         $a = 5;
         $b = 6;
 
@@ -14,35 +16,40 @@ class PHP8ArrowFunctions extends Refactor implements RefactorInterface
         {
             return $a * $b;
         }
+
         $product = multiply($a, $b);
 
-        echo "<h3>output from original method</h3>";
-        echo $product;
+        /** end code */
 
+
+        //output
+        $this->showOutput(__FUNCTION__, $product);
         return $this;
     }
 
     public function refactor($args): PHP8ArrowFunctions
     {
+        /** code */
+
         $a = 5;
         $b = 6;
 
         $multiply = fn($a, $b) => $a * $b;
         $product  = $multiply($a, $b);
 
-        echo "<h3>output from refactored method</h3>";
-        echo $product;
+        /** end code */
 
+
+        //output
+        $this->showOutput(__FUNCTION__, $product);
         return $this;
     }
 
-    public function getExplanation()
+    public function getExplanation() : string
     {
-
-        $explanation = '
+        return '
             <h1>This shows blabla</h1>
         ';
-        return $explanation;
     }
 
 }
