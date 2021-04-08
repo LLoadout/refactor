@@ -8,4 +8,4 @@ LLoadout is your loadout for Laravel.  It helps you with tips , code examples an
 
 ## LLoadout Refactoring
 
-This repo is the an example code base for refactorings I want to show you from real world examples.  Its the companion code for the LLoadout Refactoring Youtube channel ( work in progress )
+This repo is an example code base for refactorings I want to show you.  Examples from real world projects.  It's the companion code for the LLoadout Refactoring Youtube channel ( work in progress )
