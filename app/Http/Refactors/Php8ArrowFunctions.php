@@ -2,7 +2,7 @@
 
 namespace App\Http\Refactors;
 
-class PHP8ArrowFunctions extends Refactor implements RefactorInterface
+class Php8ArrowFunctions extends Refactor implements RefactorInterface
 {
     public $title     = "Refactoring to arrow function";
     public $longtitle = "In this refactoring we change a function call to fn";

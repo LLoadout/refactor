@@ -2,7 +2,7 @@
 
 namespace App\Http\Refactors;
 
-class PHP8Match extends Refactor implements RefactorInterface
+class Php8Match extends Refactor implements RefactorInterface
 {
     public $title     = "Refactoring to match";
     public $longtitle = "In this refactoring we change a switch statement to a match statement";
