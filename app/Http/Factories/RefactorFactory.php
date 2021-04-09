@@ -9,6 +9,6 @@ class RefactorFactory
 {
     public static function create($module)
     {
-        return app('App\Http\Refactors\\' . Str::studly($module));
+        return app('App\Http\Refactors\\' . Str::studly(str_replace("-","_",$module)));
     }
 }

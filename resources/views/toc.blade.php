@@ -23,7 +23,7 @@
                         <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                         </svg>
-                        <p class="ml-9 text-lg leading-6 font-medium text-gray-900"><a href="/refactor/php8match?status=2">refactor to Match</a><br /></p>
+                        <p class="ml-9 text-lg leading-6 font-medium text-gray-900"><a href="/refactor/php8-match?status=2">refactor to Match</a><br /></p>
                     </dt>
                     <dd class="mt-2 ml-9 text-base text-gray-500">
                         The match expression branches evaluation based on an identity check of a value. ( php8 )
@@ -36,7 +36,7 @@
                         <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                         </svg>
-                        <p class="ml-9 text-lg leading-6 font-medium text-gray-900"><a href="/refactor/php8arrowfunctions">Using Arrow functions</a></p>
+                        <p class="ml-9 text-lg leading-6 font-medium text-gray-900"><a href="/refactor/php8-arrow-functions">Using Arrow functions</a></p>
                     </dt>
                     <dd class="mt-2 ml-9 text-base text-gray-500">
                         Arrow functions were introduced in PHP 7.4 as a more concise syntax for anonymous functions.
@@ -49,7 +49,7 @@
                         <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                         </svg>
-                        <p class="ml-9 text-lg leading-6 font-medium text-gray-900"><a href="/refactor/nulloperators">Null coalescence operator</a></p>
+                        <p class="ml-9 text-lg leading-6 font-medium text-gray-900"><a href="/refactor/null-operators">Null coalescence operator</a></p>
                     </dt>
                     <dd class="mt-2 ml-9 text-base text-gray-500">
                         The null coalescing operator (??) has been added as syntactic sugar for the common case of needing to use a ternary in conjunction with isset().
@@ -62,7 +62,7 @@
                         <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                         </svg>
-                        <p class="ml-9 text-lg leading-6 font-medium text-gray-900"><a href="/refactor/nulloperators">Null assignment operator</a></p>
+                        <p class="ml-9 text-lg leading-6 font-medium text-gray-900"><a href="/refactor/null-operators">Null assignment operator</a></p>
                     </dt>
                     <dd class="mt-2 ml-9 text-base text-gray-500">
                         The Null Coalesce Assignment Operator (??=) assigns the value of the right-hand parameter if the left-hand parameter is null.
