@@ -4,6 +4,9 @@ namespace App\Http\Refactors;
 
 class NullOperators extends Refactor implements RefactorInterface
 {
+    public $title     = "Refactoring to null coalescing operators";
+    public $longtitle = "In this refactoring we refactor isset to the null coalescing operator and expand 
+                         it with the null coalescing assignment operator";
 
     public function original($args): NullOperators
     {
@@ -28,7 +31,7 @@ class NullOperators extends Refactor implements RefactorInterface
         // Example 1 : With the null coalescing operator
         $_GET['status'] = $_GET['status'] ?? 'no status defined';
 
-        $this->showOutput(__FUNCTION__." - example 1", $_GET['status']);
+        $this->showOutput(__FUNCTION__ . " - example 1", $_GET['status']);
 
         // Example 2 : With the null coalescing assignment operator it can even be more simplified:
         $_GET['status'] ??= 'no status defined';
@@ -36,16 +39,18 @@ class NullOperators extends Refactor implements RefactorInterface
         /** end code  */
 
 
-        $this->showOutput(__FUNCTION__." - example 2", $_GET['status']);
+        $this->showOutput(__FUNCTION__ . " - example 2", $_GET['status']);
         return $this;
     }
 
-    public function getExplanation() : string
+    public function getExplanation(): string
     {
         return '
-            <h1>This page explains the null coalescense operator and the null assignment operator</h1>
-            <a href="https://www.php.net/manual/en/language.operators.comparison.php#language.operators.comparison.coalesce">https://www.php.net/manual/en/language.operators.comparison.php#language.operators.comparison.coalesce</a>
-            <hr />
+            The null coalescing operator (??) has been added as syntactic sugar for the common case of 
+            needing to use a ternary in conjunction with isset(). It returns its first operand if it exists
+            and is not null; otherwise it returns its second operand.
+            <br/><br/>
+            source: https://www.php.net
         ';
     }
 

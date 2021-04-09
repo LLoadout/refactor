@@ -4,6 +4,9 @@ namespace App\Http\Refactors;
 
 class PHP8Match extends Refactor implements RefactorInterface
 {
+    public $title     = "Refactoring to match";
+    public $longtitle = "In this refactoring we change a switch statement to a match statement";
+
     const PENDING = 1;
     const ACCEPTED = 2;
     const REJECTED = 3;
@@ -57,10 +60,16 @@ class PHP8Match extends Refactor implements RefactorInterface
         return $this;
     }
 
-    public function getExplanation() : string
+    public function getExplanation(): string
     {
         return '
-            <h1>This shows blabla</h1>
+            The match expression branches evaluation based on an identity check of a value. Similarly to a switch 
+            statement, a match expression has a subject expression that is compared against multiple alternatives. 
+            Unlike switch, it will evaluate to a value much like ternary expressions. Unlike switch, the comparison
+            is an identity check (===) rather than a weak equality check (==). Match expressions are available as 
+            of PHP 8.0.0.
+            <br/><br/>
+            source: https://www.php.net/manual/en/control-structures.match.php
         ';
     }
 
