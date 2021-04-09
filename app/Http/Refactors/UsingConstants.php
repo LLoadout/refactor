@@ -2,17 +2,17 @@
 
 namespace App\Http\Refactors;
 
-class Php8Match extends Refactor implements RefactorInterface
+class UsingConstants extends Refactor implements RefactorInterface
 {
-    public $title     = "Refactoring to match";
-    public $longtitle = "In this refactoring we change a switch statement to a match statement";
+    public $title     = "Refactoring to constants";
+    public $longtitle = "Using constants is much more self-explanatory than using numbers";
 
     const PENDING = 1;
     const ACCEPTED = 2;
     const REJECTED = 3;
     const BLOCKED = 4;
 
-    public function original($args): PHP8Match
+    public function original($args): UsingConstants
     {
         /** code */
 
@@ -40,9 +40,17 @@ class Php8Match extends Refactor implements RefactorInterface
         return $this;
     }
 
-    public function refactor($args): PHP8Match
+    public function refactor($args): UsingConstants
     {
         /** code */
+
+        /*
+        Define in body of class
+        const PENDING = 1;
+        const ACCEPTED = 2;
+        const REJECTED = 3;
+        const BLOCKED = 4;
+        */
 
         $status = (int)$args['status'];
 
@@ -63,13 +71,12 @@ class Php8Match extends Refactor implements RefactorInterface
     public function getExplanation(): string
     {
         return '
-            The match expression branches evaluation based on an identity check of a value. Similarly to a switch 
-            statement, a match expression has a subject expression that is compared against multiple alternatives. 
-            Unlike switch, it will evaluate to a value much like ternary expressions. Unlike switch, the comparison
-            is an identity check (===) rather than a weak equality check (==). Match expressions are available as 
-            of PHP 8.0.0.
+            A constant is an identifier (name) for a simple value. As the name suggests, 
+            that value cannot change during the execution of the script (except for magic
+             constants, which aren\'t actually constants). 
+             Constants are case-sensitive. By convention, constant identifiers are always uppercase.
             <br/><br/>
-            source: https://www.php.net/manual/en/control-structures.match.php
+            source: https://www.php.net/manual/en/language.constants.php
         ';
     }
 

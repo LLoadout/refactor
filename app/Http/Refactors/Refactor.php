@@ -22,10 +22,12 @@ class Refactor
 
     protected function showOutput(string $method, string $output)
     {
+        echo '/** output */';
         echo '<div class="p-5 mt-4 bg-gray-100 full-width rounded-lg shadow">';
         echo '<h3 class="text-lg font-medium">This is the output of <span class="text-blue-400">'.$method.'</span></h3>';
         echo $output;
         echo '</div>';
+        echo '/** end output */';
     }
 
 }

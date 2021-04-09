@@ -48,12 +48,50 @@
             <p class="mt-8 text-xl text-gray-500 leading-8">{!! $explanation !!}</p>
         </div>
         <div class="max-w-4xl mx-auto mt-10">
+            <h2 class="text-indigo-600 text-xl mb-10 font-bold">Original code</h2>
             <div class="bg-white shadow sm:rounded-lg">
                 <div class="px-4 py-5 sm:p-6">
                     <div class="mt-2 max-w-xl text-xs text-gray-500">
                         <p>
-                            {!! $content !!}
+                            <code>
+                            {!! $torefactor !!}
+                            </code>
                         </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto mt-10">
+            <h2 class="text-indigo-600 text-xl mb-10 font-bold">Refactored code</h2>
+            <div class="bg-white shadow sm:rounded-lg">
+                <div class="px-4 py-5 sm:p-6">
+                    <div class="mt-2 max-w-xl text-xs text-gray-500">
+                        <p>
+                            <code>
+                            {!! $refactored !!}
+                            </code>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto mt-10">
+            <h2 class="text-indigo-600 text-xl mb-5 font-bold">Here is the output of the code</h2>
+            <div class="bg-white shadow sm:rounded-lg">
+                <div class="px-4 py-5 sm:p-6">
+                    <div class="mt-2 max-w-xl text-xs text-gray-500">
+                        <p>
+
+                            @foreach($output as $outputstring)
+                                {!! $outputstring !!}
+                            @endforeach
+                        </p>
+
                     </div>
 
                 </div>
