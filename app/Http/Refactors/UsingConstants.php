@@ -16,6 +16,12 @@ class UsingConstants extends Refactor implements RefactorInterface
     {
         /** code */
 
+        /**
+         *
+         *      in this code example is very hard to find out what 1 actually means ...
+         *
+         */
+
         $status = (int)$args['status'];
 
         switch ($status) {
@@ -44,13 +50,18 @@ class UsingConstants extends Refactor implements RefactorInterface
     {
         /** code */
 
-        /*
-        Define in body of class
-        const PENDING = 1;
-        const ACCEPTED = 2;
-        const REJECTED = 3;
-        const BLOCKED = 4;
-        */
+        /**
+         *
+         *      Define in body of class
+         *      const PENDING = 1;
+         *      const ACCEPTED = 2;
+         *      const REJECTED = 3;
+         *      const BLOCKED = 4;
+         *
+         *      This code is self explanatory , the constants are in fact numbers but tell you what they are
+         *
+         */
+
 
         $status = (int)$args['status'];
 
