@@ -54,12 +54,20 @@ class UsingConstants extends Refactor implements RefactorInterface
 
         $status = (int)$args['status'];
 
-        $notifier = match ($status) {
-            self::PENDING => $this->SendPendingNotification(),
-            self::ACCEPTED => $this->SendAcceptedNotification(),
-            self::REJECTED => $this->SendRejectedNotification(),
-            self::BLOCKED => $this->SendBlockedNotification(),
-        };
+        switch ($status) {
+            case self::PENDING:
+                $notifier = $this->SendPendingNotification();
+                break;
+            case self::ACCEPTED:
+                $notifier = $this->SendAcceptedNotification();
+                break;
+            case self::REJECTED:
+                $notifier = $this->SendRejectedNotification();
+                break;
+            case self::BLOCKED:
+                $notifier = $this->SendBlockedNotification();
+                break;
+        }
 
         /** end code */
 
