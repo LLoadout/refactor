@@ -2,6 +2,7 @@
     <div class="hidden absolute top-0 inset-x-0 h-1/2 bg-gray-50 lg:block" aria-hidden="true"></div>
     <div class="max-w-7xl mx-auto bg-indigo-600 lg:bg-transparent lg:px-8">
         <div class="lg:grid lg:grid-cols-12">
+
             <div class="relative z-10 lg:col-start-1 lg:row-start-1 lg:col-span-4 lg:py-16 lg:bg-transparent">
                 <div class="absolute inset-x-0 h-1/2 bg-gray-50 lg:hidden" aria-hidden="true"></div>
                 <div class="max-w-md mx-auto px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:p-0">
@@ -10,6 +11,7 @@
                     </div>
                 </div>
             </div>
+
 
             <div class="relative bg-blue-400 lg:col-start-3 lg:row-start-1 lg:col-span-10 lg:rounded-3xl lg:grid lg:grid-cols-10 lg:items-center">
                 <div class="hidden absolute inset-0 overflow-hidden rounded-3xl lg:block" aria-hidden="true">
@@ -37,5 +39,6 @@
                 </div>
             </div>
         </div>
+
     </div>
 </div>
