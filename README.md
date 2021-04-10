@@ -15,6 +15,6 @@ It's the companion code for the LLoadout Youtube refactoring channel ( work in p
 
 ## How it works
 
-
+Each class has a original and refactor method that does the magic
 
 <img src="https://refactor.lloadout.com/img/example.png">
