@@ -4,9 +4,9 @@ namespace App\Http\Refactors;
 
 class Php8PropertyPromotion extends Refactor implements RefactorInterface
 {
-    public $title     = "Refactoring to property promotion";
+    public $title       = "Refactoring to property promotion";
     public $description = "In this refactoring we change a switch statement to a match statement";
-    public $requires = ['php >= 8.0.0'];
+    public $requires    = ['php >= 8.0.0'];
 
 
     public function original($args): Php8PropertyPromotion
