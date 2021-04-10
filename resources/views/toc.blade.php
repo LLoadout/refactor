@@ -129,7 +129,7 @@
             <div class="max-w-3xl mx-auto text-center">
                 <p class="mt-4 text-lg text-2xl text-gray-500">This repo is open sourced and works with some magic under the hood.  The example on the left is automagically created from the code on the right.</p>
             </div>
-            <img class="mt-20" src="{{ asset('img/example.png') }}" />
+            <img class="object-cover bg-white object-center rounded-3xl shadow-2xl mt-20" src="{{ asset('img/example.png') }}" />
         </div>
     </div>
 
