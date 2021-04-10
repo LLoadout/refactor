@@ -9,6 +9,8 @@ class Refactor
     public $title;
     public $description;
     public $requires = [];
+    public $url;
+    public $icon = "https://www.php.net/images/logos/php-icon-white.gif";
 
     public function explain()
     {

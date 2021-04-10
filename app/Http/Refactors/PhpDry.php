@@ -6,6 +6,7 @@ class PhpDry extends Refactor implements RefactorInterface
 {
     public $title       = "Dry programming";
     public $description = "Sometimes i find myself repeating code , most of the time when business logic changes and we start implementing if statements.";
+    public $url         = "php-dry";
 
     public function original($args): PhpDry
     {

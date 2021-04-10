@@ -7,7 +7,8 @@ class LaravelOptionalHelper extends Refactor implements RefactorInterface
     public $title       = "Refactoring to the optional helper";
     public $description = "The optional helper gives you a clean syntax, instead of using checks";
     public $requires    = ['laravel >= 6.x'];
-
+    public $url         = "laravel-optional-helper";
+    public $icon        = "https://laravel.com/img/favicon/favicon.ico";
 
     public function original($args): LaravelOptionalHelper
     {
