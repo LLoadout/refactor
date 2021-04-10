@@ -24,7 +24,7 @@
                         <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                         </svg>
-                        <p class="ml-9 text-lg leading-6 font-medium text-gray-900"><a href="/refactor/php8-match?status=2">refactor to Match</a><br /></p>
+                        <p class="ml-9 text-lg leading-6 font-medium text-gray-900"><a href="/refactor/php8-match?status=2">Refactor to Match</a><br /></p>
                     </dt>
                     <dd class="mt-2 ml-9 text-base text-gray-500">
                         The match expression branches evaluation based on an identity check of a value. ( php8 )
@@ -93,6 +93,32 @@
                     </dt>
                     <dd class="mt-2 ml-9 text-base text-gray-500">
                         Using constants is much more self-explanatory than using numbers.
+                    </dd>
+                </div>
+
+                <div class="relative">
+                    <dt>
+                        <!-- Heroicon name: outline/check -->
+                        <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <p class="ml-9 text-lg leading-6 font-medium text-gray-900"><a href="/refactor/laravel-optional-helper">Laravel optional helper</a></p>
+                    </dt>
+                    <dd class="mt-2 ml-9 text-base text-gray-500">
+                        Using the optional helper from Laravel , you will get much cleaner and readable code
+                    </dd>
+                </div>
+
+                <div class="relative">
+                    <dt>
+                        <!-- Heroicon name: outline/check -->
+                        <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <p class="ml-9 text-lg leading-6 font-medium text-gray-900"><a href="/refactor/php-dry">Coding style , don't repeat yourself</a></p>
+                    </dt>
+                    <dd class="mt-2 ml-9 text-base text-gray-500">
+                        Sometimes i find myself repeating code , most of the time when business logic changes and we start implementing if statements.
                     </dd>
                 </div>
 
