@@ -9,6 +9,7 @@
 
 </head>
 <body class="antialiased">
+@include('menu')
 
 <div class="relative py-16 bg-white overflow-hidden">
     <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
