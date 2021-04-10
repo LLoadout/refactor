@@ -43,7 +43,14 @@
         <div class="text-lg max-w-prose mx-auto">
             <h1>
                 <span class="block text-base text-3xl text-center text-indigo-600 font-semibold tracking-wide uppercase">{{ $title }}</span>
-                <span class="mt-2 block text text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-2xl">{{ $longtitle }}</span>
+                <span class="mt-2 block text text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-2xl">{{ $description }}</span>
+                <span class="mt-2 block text text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-2xl">
+                    @foreach($requires as $requirement)
+                    <div class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full">
+                        requires: {{ $requirement }}
+                    </div>
+                    @endforeach
+                </span>
             </h1>
             <p class="mt-8 text-xl text-gray-500 leading-8">{!! $explanation !!}</p>
         </div>
@@ -53,8 +60,8 @@
                 <div class="px-4 py-5 sm:p-6">
                     <div class="mt-2 max-w-xl text-xs text-gray-500">
                         <p>
-                            <code>
-                            {!! $torefactor !!}
+                            <code class="text-black">
+                                {!! $torefactor !!}
                             </code>
                         </p>
 
@@ -70,8 +77,8 @@
                 <div class="px-4 py-5 sm:p-6">
                     <div class="mt-2 max-w-xl text-xs text-gray-500">
                         <p>
-                            <code>
-                            {!! $refactored !!}
+                            <code class="text-black">
+                                {!! $refactored !!}
                             </code>
                         </p>
                     </div>
@@ -80,23 +87,24 @@
             </div>
         </div>
 
-        <div class="max-w-4xl mx-auto mt-10">
-            <h2 class="text-indigo-600 text-xl mb-5 font-bold">Here is the output of the code</h2>
-            <div class="bg-white shadow sm:rounded-lg">
-                <div class="px-4 py-5 sm:p-6">
-                    <div class="mt-2 max-w-xl text-xs text-gray-500">
-                        <p>
+        @if(sizeof($output) > 0)
+            <div class="max-w-4xl mx-auto mt-10">
+                <h2 class="text-indigo-600 text-xl mb-5 font-bold">Here is the output of the code</h2>
+                <div class="bg-white shadow sm:rounded-lg">
+                    <div class="px-4 py-5 sm:p-6">
+                        <div class="mt-2 max-w-xl text-xs text-gray-500">
+                            <p>
+                                @foreach($output as $outputstring)
+                                    {!! $outputstring !!}
+                                @endforeach
+                            </p>
 
-                            @foreach($output as $outputstring)
-                                {!! $outputstring !!}
-                            @endforeach
-                        </p>
+                        </div>
 
                     </div>
-
                 </div>
             </div>
-        </div>
+        @endif
     </div>
 
     @include('cta')

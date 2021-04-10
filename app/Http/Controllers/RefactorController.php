@@ -19,14 +19,16 @@ class RefactorController extends Controller
         preg_match_all('%/\*\*&nbsp;code&nbsp;\*/(.*?)/\*\*&nbsp;end&nbsp;code&nbsp;\*/%i', $content, $matches, PREG_PATTERN_ORDER);
         preg_match_all('%/\*\* output \*/(.*?)/\*\* end output \*/%i', $content, $output, PREG_PATTERN_ORDER);
 
-        $torefactor = $matches[1][0];
-        $refactored = $matches[1][1];
-        $output = $output[1];
+        $torefactor = str_replace(["/**&nbsp;stub", "&nbsp;stub&nbsp;*/"], "", $matches[1][0]);
+        $refactored = str_replace(["/**&nbsp;stub", "&nbsp;stub&nbsp;*/"], "", $matches[1][1]);
+        $output     = $output[1];
 
         $title       = $refactor->title;
-        $longtitle   = $refactor->longtitle;
+        $description = $refactor->description;
         $explanation = $refactor->getExplanation();
-        return view('refactor', compact('content', 'title', 'longtitle', 'explanation','torefactor', 'refactored','output'));
+        $requires    = $refactor->requires;
+
+        return view('refactor', compact('content', 'title', 'description','requires', 'explanation', 'torefactor', 'refactored', 'output'));
     }
 
 

@@ -5,7 +5,7 @@ namespace App\Http\Refactors;
 class UsingConstants extends Refactor implements RefactorInterface
 {
     public $title     = "Refactoring to constants";
-    public $longtitle = "Using constants is much more self-explanatory than using numbers";
+    public $description = "Using constants is much more self-explanatory than using numbers";
 
     const PENDING = 1;
     const ACCEPTED = 2;

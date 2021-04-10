@@ -6,6 +6,10 @@ use stdClass;
 
 class Refactor
 {
+    public $title;
+    public $description;
+    public $requires = [];
+
     public function explain()
     {
         show_source(app_path() . "/Http/Refactors/" . class_basename($this) . ".php");

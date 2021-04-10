@@ -5,7 +5,7 @@ namespace App\Http\Refactors;
 class NullOperators extends Refactor implements RefactorInterface
 {
     public $title     = "Refactoring to null coalescing operators";
-    public $longtitle = "In this refactoring we refactor isset to the null coalescing operator and expand 
+    public $description = "In this refactoring we refactor isset to the null coalescing operator and expand 
                          it with the null coalescing assignment operator";
 
     public function original($args): NullOperators
