@@ -125,6 +125,12 @@
 
             </dl>
         </div>
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="mt-4 text-lg text-2xl text-gray-500">This repo is open sourced and works with some magic under the hood.  The example on the left is automagically created from the code on the right.</p>
+            </div>
+            <img class="mt-20" src="{{ asset('img/example.png') }}" />
+        </div>
     </div>
 
 @include('cta')
