@@ -8,6 +8,7 @@ class NullOperators extends Refactor implements RefactorInterface
     public $description = "In this refactoring we refactor isset to the null coalescing operator and expand 
                            it with the null coalescing assignment operator";
     public $requires    = ['php >= 7.0.0'];
+    public $doc         = "https://www.php.net";
     public $url         = "null-operators";
 
     public function original($args): NullOperators
@@ -51,8 +52,6 @@ class NullOperators extends Refactor implements RefactorInterface
             The null coalescing operator (??) has been added as syntactic sugar for the common case of 
             needing to use a ternary in conjunction with isset(). It returns its first operand if it exists
             and is not null; otherwise it returns its second operand.
-            <br/><br/>
-            source: https://www.php.net
         ';
     }
 

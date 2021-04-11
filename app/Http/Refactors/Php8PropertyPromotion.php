@@ -7,6 +7,7 @@ class Php8PropertyPromotion extends Refactor implements RefactorInterface
     public $title       = "Refactoring to property promotion";
     public $description = "In this refactoring we change a switch statement to a match statement";
     public $requires    = ['php >= 8.0.0'];
+    public $doc         = "https://www.php.net/manual/en/language.oop5.decon.php";
     public $url         = "php8-property-promotion";
 
     public function original($args): Php8PropertyPromotion
@@ -66,9 +67,7 @@ class Php8PropertyPromotion extends Refactor implements RefactorInterface
             As of PHP 8.0.0, constructor parameters may also be promoted to correspond to an object property. 
             It is very common for constructor parameters to be assigned to a property in the constructor but 
             otherwise not operated upon. Constructor promotion provides a short-hand for that use case. 
-            The example above could be rewritten as the following.
-            <br/><br/>
-            source: https://www.php.net/manual/en/language.oop5.decon.php
+            The example above could be rewritten as the following.       
         ';
     }
 

@@ -27,8 +27,10 @@ class RefactorController extends Controller
         $description = $refactor->description;
         $explanation = $refactor->getExplanation();
         $requires    = $refactor->requires;
+        $doc         = $refactor->doc;
+        $icon        = $refactor->icon;
 
-        return view('refactor', compact('content', 'title', 'description','requires', 'explanation', 'torefactor', 'refactored', 'output'));
+        return view('refactor', compact('content', 'title', 'description', 'requires', 'explanation', 'doc', 'icon','torefactor', 'refactored', 'output'));
     }
 
 

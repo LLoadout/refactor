@@ -7,6 +7,7 @@ class UsingConstants extends Refactor implements RefactorInterface
     public $title       = "Refactoring to constants";
     public $description = "Using constants is much more self-explanatory than using numbers";
     public $requires    = ['php >= 7.0.0'];
+    public $docs        = "https://www.php.net/manual/en/language.constants.php";
     public $url         = "using-constants?status=2";
 
 
@@ -97,8 +98,6 @@ class UsingConstants extends Refactor implements RefactorInterface
             that value cannot change during the execution of the script (except for magic
              constants, which aren\'t actually constants). 
              Constants are case-sensitive. By convention, constant identifiers are always uppercase.
-            <br/><br/>
-            source: https://www.php.net/manual/en/language.constants.php
         ';
     }
 

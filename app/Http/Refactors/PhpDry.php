@@ -12,18 +12,18 @@ class PhpDry extends Refactor implements RefactorInterface
     {
         $companyId = 123456789;
         $mount     = "/mnt/path";
-        $identfier = "identifier";
+        $identifier = "identifier";
 
         /** code */
 
         if (is_null($companyId)) {
             if (!auth()->check()) {
-                $path = $mount . '/remote/_chunks' . $identfier;
+                $path = $mount . '/remote/_chunks' . $identifier;
             } else {
-                $path = $mount . '/' . auth()->user->companyId . '/_chunks' . $identfier;
+                $path = $mount . '/' . auth()->user->companyId . '/_chunks' . $identifier;
             }
         } else {
-            $path = $mount . '/' . $companyId . '/_chunks/' . $identfier;
+            $path = $mount . '/' . $companyId . '/_chunks/' . $identifier;
         }
 
         /** end code */
@@ -37,7 +37,7 @@ class PhpDry extends Refactor implements RefactorInterface
 
         $companyId = 123456789;
         $mount     = "/mnt/path";
-        $identfier = "identifier";
+        $identifier = "identifier";
 
         /** code */
 
@@ -48,7 +48,7 @@ class PhpDry extends Refactor implements RefactorInterface
         // or even shorter , but maybe less readable
         $companyFolder = $companyId ?? (!auth()->check() ? "remote" : auth()->user->companyId);
 
-        $path = $mount . '/' . $companyFolder . '/_chunks/' . $identfier;
+        $path = $mount . '/' . $companyFolder . '/_chunks/' . $identifier;
 
         /** end code */
 
@@ -59,7 +59,9 @@ class PhpDry extends Refactor implements RefactorInterface
 
     public function getExplanation(): string
     {
-        return '
+        return 'One of the difficult things in programming is trying your code dry.  
+        It\'s not easy to not repeat yourself.  This example is perfect working code
+        but if the _chunk term needs change , it has to be changend in three places.
         ';
     }
 

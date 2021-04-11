@@ -7,6 +7,7 @@ class Php8Match extends Refactor implements RefactorInterface
     public $title       = "Refactoring to match";
     public $description = "In this refactoring we change a switch statement to a match statement";
     public $requires    = ["php >= 8.0.0"];
+    public $doc         = "https://www.php.net/manual/en/control-structures.match.php";
     public $url         = "php8-match?status=2";
 
     const PENDING = 1;
@@ -70,8 +71,6 @@ class Php8Match extends Refactor implements RefactorInterface
             Unlike switch, it will evaluate to a value much like ternary expressions. Unlike switch, the comparison
             is an identity check (===) rather than a weak equality check (==). Match expressions are available as 
             of PHP 8.0.0.
-            <br/><br/>
-            source: https://www.php.net/manual/en/control-structures.match.php
         ';
     }
 
