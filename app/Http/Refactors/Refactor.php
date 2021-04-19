@@ -27,7 +27,7 @@ class Refactor
         return $stubClass;
     }
 
-    protected function showOutput(string $method, string $output)
+    protected function showOutput(string $method, $output)
     {
         echo '/** output */';
         echo '<div class="p-5 mt-4 bg-gray-100 full-width rounded-lg shadow">';
