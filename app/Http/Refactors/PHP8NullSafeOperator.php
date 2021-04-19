@@ -2,7 +2,7 @@
 
 namespace App\Http\Refactors;
 
-class PHP8NullsafeOperator extends Refactor implements RefactorInterface
+class PHP8NullSafeOperator extends Refactor implements RefactorInterface
 {
     public $title       = "Refactoring to null safe operator";
     public $description = "In this refactoring we make use of the nullsafe operator, so we can get null back without blowing our code";
