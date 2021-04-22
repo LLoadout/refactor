@@ -23,16 +23,18 @@ class Php8Match extends Refactor implements RefactorInterface
 
         switch ($status) {
             case 1:
-                $notifier = $this->SendPendingNotification();
+                $notifier = $this->sendPendingNotification();
                 break;
             case 2:
-                $notifier = $this->SendAcceptedNotification();
+                $notifier = $this->sendAcceptedNotification();
                 break;
             case 3:
-                $notifier = $this->SendRejectedNotification();
+                $notifier = $this->sendRejectedNotification();
                 break;
             case 4:
-                $notifier = $this->SendBlockedNotification();
+                $notifier = $this->sendBlockedNotification();
+            default:
+                $notifier = $this->sendDefaultNotification();
                 break;
         }
 
@@ -50,10 +52,11 @@ class Php8Match extends Refactor implements RefactorInterface
         $status = (int)$args['status'];
 
         $notifier = match ($status) {
-            self::PENDING => $this->SendPendingNotification(),
-            self::ACCEPTED => $this->SendAcceptedNotification(),
-            self::REJECTED => $this->SendRejectedNotification(),
-            self::BLOCKED => $this->SendBlockedNotification(),
+            self::PENDING => $this->sendPendingNotification(),
+            self::ACCEPTED => $this->sendAcceptedNotification(),
+            self::REJECTED => $this->sendRejectedNotification(),
+            self::BLOCKED => $this->sendBlockedNotification(),
+            default => $this->sendDefaultNotification()
         };
 
         /** end code */
