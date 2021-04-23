@@ -17,7 +17,7 @@ class Refactor
 
     public function __construct()
     {
-        $this->url = Str::slug(class_basename($this)). $this->querystring;
+        $this->url = str_replace('_','-',Str::snake(class_basename($this))). $this->querystring;
     }
 
     public function explain()
