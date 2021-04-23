@@ -2,6 +2,7 @@
 
 namespace App\Http\Refactors;
 
+use Illuminate\Support\Str;
 use stdClass;
 
 class Refactor
@@ -10,8 +11,14 @@ class Refactor
     public $description;
     public $requires = [];
     public $url;
+    public $querystring;
     public $doc;
-    public $icon = "https://www.php.net/images/logos/php-icon-white.gif";
+    public $icon     = "https://www.php.net/images/logos/php-icon-white.gif";
+
+    public function __construct()
+    {
+        $this->url = Str::slug(class_basename($this)). $this->querystring;
+    }
 
     public function explain()
     {
@@ -31,7 +38,7 @@ class Refactor
     {
         echo '/** output */';
         echo '<div class="p-5 mt-4 bg-gray-100 full-width rounded-lg shadow">';
-        echo '<h3 class="text-lg font-medium">This is the output of <span class="text-blue-400">'.$method.'</span></h3>';
+        echo '<h3 class="text-lg font-medium">This is the output of <span class="text-blue-400">' . $method . '</span></h3>';
         echo $output;
         echo '</div>';
         echo '/** end output */';

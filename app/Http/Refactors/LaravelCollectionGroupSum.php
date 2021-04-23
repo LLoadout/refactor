@@ -7,7 +7,6 @@ class LaravelCollectionGroupSum extends Refactor implements RefactorInterface
     public $title       = "Refactoring to collections, groupby, map and sum";
     public $description = "Collections are very powerful, here we show the power of groupby, map and sum in one line ";
     public $requires    = ['laravel >= 5.1'];
-    public $url         = "laravel-collection-group-sum";
     public $doc         = "https://laravel.com/docs/8.x/collections";
     public $icon        = "https://laravel.com/img/favicon/favicon.ico";
 

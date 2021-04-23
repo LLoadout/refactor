@@ -7,7 +7,6 @@ class LaravelCollectionFilter extends Refactor implements RefactorInterface
     public $title       = "Refactoring to collection filter";
     public $description = "Collections are very powerful, this refactor shows the filter method";
     public $requires    = ['laravel >= 5.1'];
-    public $url         = "laravel-collection-filter";
     public $doc         = "https://laravel.com/docs/8.x/collections#method-filter";
     public $icon        = "https://laravel.com/img/favicon/favicon.ico";
 

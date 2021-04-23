@@ -1,0 +1,46 @@
+<?php
+
+namespace App\Http\Refactors;
+
+class DummyClass extends Refactor implements RefactorInterface
+{
+    public $title       = "Provide a title - shown on the homepage";
+    public $description = "Provide a description - shown on the homepage";
+    public $requires    = ['php >= 7.0.0'];
+    public $doc         = "https://www.php.net";
+
+    public function original($args): DummyClass
+    {
+        /** code */
+
+        // Here comes your original code
+        $output = "Output of original code";
+
+        /** end code */
+
+        $this->showOutput(__FUNCTION__, $output);
+        return $this;
+    }
+
+    public function refactor($args): DummyClass
+    {
+        /** code */
+
+        // Here comes your refactored code
+        $output = "Output of refactored code";
+
+        /** end code */
+
+        $this->showOutput(__FUNCTION__ , $output);
+        return $this;
+    }
+
+    public function getExplanation(): string
+    {
+        return '
+            Provide a longer description , this description
+            will be shown on the detail page of the refactor
+        ';
+    }
+
+}

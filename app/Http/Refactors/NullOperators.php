@@ -9,7 +9,6 @@ class NullOperators extends Refactor implements RefactorInterface
                            it with the null coalescing assignment operator";
     public $requires    = ['php >= 7.0.0'];
     public $doc         = "https://www.php.net";
-    public $url         = "null-operators";
 
     public function original($args): NullOperators
     {
