@@ -6,7 +6,7 @@ class UsingConstants extends Refactor implements RefactorInterface
 {
     public $title       = "Refactoring to constants";
     public $description = "Using constants is much more self-explanatory than using numbers";
-    public $requires    = ['php >= 7.0.0'];
+    public $requires    = ['php' => '7.0.0'];
     public $docs        = "https://www.php.net/manual/en/language.constants.php";
     public $querystring = "?status=2";
 

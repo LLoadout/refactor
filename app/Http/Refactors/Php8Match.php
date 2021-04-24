@@ -6,7 +6,7 @@ class Php8Match extends Refactor implements RefactorInterface
 {
     public $title       = "Refactoring to match";
     public $description = "In this refactoring we change a switch statement to a match statement";
-    public $requires    = ["php >= 8.0.0"];
+    public $requires    = ["php"  => "8.0.0"];
     public $doc         = "https://www.php.net/manual/en/control-structures.match.php";
     public $querystring = "?status=2";
 

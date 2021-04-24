@@ -47,9 +47,9 @@
                 <span class="mt-2 block text text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-2xl">{{ $description }}</span>
                 <span class="mt-2 block text text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-sm"><a target="_blank" href="{{ $doc }}">{{ $doc }}</a></span>
                 <span class="mt-2 block text text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-2xl">
-                    @foreach($requires as $requirement)
+                    @foreach($requires as $requirement => $version )
                     <div class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full">
-                        requires: {{ $requirement }}
+                        requires: {{ $requirement }} {{ $version }}
                     </div>
                     @endforeach
                 </span>

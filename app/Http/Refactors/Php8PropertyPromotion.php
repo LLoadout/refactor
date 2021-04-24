@@ -6,7 +6,7 @@ class Php8PropertyPromotion extends Refactor implements RefactorInterface
 {
     public $title       = "Refactoring to property promotion";
     public $description = "In this refactoring we show the power of propery promotion, this can save you many lines of code";
-    public $requires    = ['php >= 8.0.0'];
+    public $requires    = ['php' => '8.0.0'];
     public $doc         = "https://www.php.net/manual/en/language.oop5.decon.php";
 
     public function original($args): Php8PropertyPromotion

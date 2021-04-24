@@ -6,7 +6,7 @@ class Php8NullSafeOperator extends Refactor implements RefactorInterface
 {
     public $title       = "Refactoring to null safe operator";
     public $description = "In this refactoring we make use of the nullsafe operator, so we can get null back without blowing our code";
-    public $requires    = ['php >= 8.0.0'];
+    public $requires    = ['php' => '8.0.0'];
     public $doc         = "https://wiki.php.net/rfc/nullsafe_operator";
 
     public function original($args): Php8NullSafeOperator
