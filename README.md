@@ -21,7 +21,7 @@ Each class has a original and refactor method that does the magic
 
 ## Contributing
 
-You can fork this repository and contribute to it. There is a command include to create your refactor class.
+You can fork this repository and contribute to it by submitting a pull request. There is a command included to create your own refactor class.
 
 ```shell
 php artisan refactor:make YourRefactorClass
