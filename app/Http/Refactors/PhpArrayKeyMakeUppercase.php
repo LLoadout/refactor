@@ -6,7 +6,7 @@ class PhpArrayKeyMakeUppercase extends Refactor implements RefactorInterface
 {
     public $title       = "Change the case of array keys";
     public $description = "Sometimes you want to change the case of array keys, this can been done efficiently";
-    public $requires    = ['php >= 4.0.0'];
+    public $requires    = ['php' => '4.0.0'];
     public $doc         = "https://www.php.net";
 
     public function original($args): phpArrayKeyMakeUppercase
@@ -32,7 +32,7 @@ class PhpArrayKeyMakeUppercase extends Refactor implements RefactorInterface
     public function refactor($args): phpArrayKeyMakeUppercase
     {
         /** code */
-        
+
         $myArray = array("name" => "John Doe", "Age" => 40, "emAil" => "john@email.com");
 
         $myArray = array_change_key_case($myArray, CASE_UPPER);
