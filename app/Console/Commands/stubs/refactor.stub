@@ -14,11 +14,11 @@ class DummyClass extends Refactor implements RefactorInterface
         /** code */
 
         // Here comes your original code
-        $output = "Output of original code";
+        $outputOriginal = "Output of original code";
 
         /** end code */
 
-        $this->showOutput(__FUNCTION__, $output);
+        $this->showOutput(__FUNCTION__, $outputOriginal);
         return $this;
     }
 
@@ -27,11 +27,11 @@ class DummyClass extends Refactor implements RefactorInterface
         /** code */
 
         // Here comes your refactored code
-        $output = "Output of refactored code";
+        $outputRefactored = "Output of refactored code";
 
         /** end code */
 
-        $this->showOutput(__FUNCTION__ , $output);
+        $this->showOutput(__FUNCTION__ , $outputRefactored);
         return $this;
     }
 
