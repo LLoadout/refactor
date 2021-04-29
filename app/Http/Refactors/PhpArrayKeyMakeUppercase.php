@@ -18,7 +18,7 @@ class PhpArrayKeyMakeUppercase extends Refactor implements RefactorInterface
         $newArray = [];
         foreach($myArray as $key => $value){
             $key = strtoupper($key);
-            $newArray[strtoupper($key)] = $value;
+            $newArray[$key] = $value;
         }
         $myArray = $newArray;
         $outputOriginal = json_encode($myArray);
