@@ -31,9 +31,9 @@ class NullOperators extends Refactor implements RefactorInterface
         /** code */
 
         // Example 1 : With the null coalescing operator
-        $_GET['status'] = $_GET['status'] ?? 'no status defined';
+        $status = $_GET['status'] ?? 'no status defined';
 
-        $this->showOutput(__FUNCTION__ . " - example 1", $_GET['status']);
+        $this->showOutput(__FUNCTION__ . " - example 1", $status);
 
         // Example 2 : With the null coalescing assignment operator it can even be more simplified:
         $_GET['status'] ??= 'no status defined';
