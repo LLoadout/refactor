@@ -6,7 +6,7 @@ class DummyClass extends Refactor implements RefactorInterface
 {
     public $title       = "Provide a title - shown on the homepage";
     public $description = "Provide a description - shown on the homepage";
-    public $requires    = ['php >= 7.0.0'];
+    public $requires    = ['php' => '>= 7.0.0'];
     public $doc         = "https://www.php.net";
 
     public function original($args): DummyClass
