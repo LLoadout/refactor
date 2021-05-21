@@ -59,7 +59,7 @@ class PhpAlternativeSwitchStatement extends Refactor implements RefactorInterfac
     public function getExplanation(): string
     {
         return '
-            Most of the time we make our descisions in php with an if statement or a switch statement,
+            Most of the time we make our decisions in php with an if statement or a switch statement,
             sometimes this can be enhanced in an expressive way by using arrays.
         ';
     }
