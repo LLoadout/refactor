@@ -19,7 +19,12 @@ use Illuminate\Support\Str;
 
 Route::get('/', function () {
 
-    $refactors = collect(File::allFiles(app_path("Http/Refactors")))->map( fn($file) => $file->getFilename())->reject(fn($file) => in_array($file, ['Refactor.php','RefactorInterface.php']));
+    $refactors =
+        collect(File::allFiles(app_path("Http/Refactors")))
+            ->sortByDesc(fn(SplFileInfo $file) => $file->getMTime())
+            ->map( fn($file) => $file->getFilename())
+            ->reject(fn($file) => in_array($file, ['Refactor.php','RefactorInterface.php']));
+
     $refactors = $refactors->transform(function($file){
         $className = str_replace('.php','',$file);
         $refactor = RefactorFactory::create($className);
