@@ -27,7 +27,7 @@ class Refactor
     }
 
 
-    protected function __call($type, $args)
+    public function __call($type, $args)
     {
         $stubClass         = new StdClass;
         $stubClass->notify = fn() => "Invoked method {$type}<br />";
